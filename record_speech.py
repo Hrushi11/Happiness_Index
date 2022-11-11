@@ -4,6 +4,8 @@ import wave
 from speech_emotion_recognition import speech_emotion_recognition
 from speech_to_text import get_large_audio_transcription
 from text_emotion_recognition import predict
+import speech_recognition as sr
+print(sr.Microphone.list_microphone_names())
 chunk = 1024
 sample_format = pyaudio.paInt16
 channels = 2
@@ -24,6 +26,7 @@ def record_speech():
                     input=True)
 
     frames = []
+
 
     # Store data in chunks for 3 seconds
     for i in range(0, int(fs / chunk * seconds)):

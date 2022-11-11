@@ -70,12 +70,14 @@ Y = enc.fit_transform(Y)
 filename = 'models/finalized_model.sav'
 loaded_model = pickle.load(open(filename, 'rb'))
 
-f = open('output.txt', 'r')
+
 
 
 def predict():
+    f = open('output.txt', 'r')
     text = pd.Series(f)
     pred = loaded_model.predict(text)
+    f.close()
     return enc.classes_[pred][0]
 
 # predict(f)

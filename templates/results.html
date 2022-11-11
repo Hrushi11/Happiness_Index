@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Multimodal AI</title>
+  <title>Multi Disease Prediction</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/static/assets/img/favicon.png" rel="icon">
   <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -28,8 +28,14 @@
   <!-- Template Main CSS File -->
   <link href="static/assets/css/style.css" rel="stylesheet">
 
-</head>
+  <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
 <body>
 
   <!-- ======= Header ======= -->
@@ -95,27 +101,33 @@
     <section class="inner-page">
       <div class="container">
 
-
+</div>
+    </section>
 
         <!-- ======= F.A.Q Section ======= -->
     <section id="faq" class="faq section-bg">
       <div class="container">
 
-        {% if type == 'video'%}
+
           <h2>Happiness Index: {{happiness_index}}</h2>
           <h2>Emotion Detected(Video): {{emotion}}</h2>
 
-        {% elif type == 'speech'%}
           <h2>{{Speech_Emotion}}</h2>
           <h2>{{Text}}</h2>
           <h2>{{Text_Emotion}}</h2>
+          <h2>Label: {{label}}</h2>
 
-        {% endif %}
         </div>
 
       </div>
     </section>
 
+    {% if label == 'psychological'%}
+
+    {% elif label == 'health'%}
+    {% elif label == 'financial'%}
+    {% else %}
+    {% endif %}
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -192,7 +204,7 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
+ <!-- Vendor JS Files -->
   <script src="static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="static/assets/vendor/aos/aos.js"></script>
   <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
