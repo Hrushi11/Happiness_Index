@@ -100,18 +100,19 @@
         <!-- ======= F.A.Q Section ======= -->
     <section id="faq" class="faq section-bg">
       <div class="container">
+          <h2> How are you feeling today? </h2>
+        <form action="/run_voice" method="get">
+  <button id="btn" type="submit">Answer the question</button>
+</form>
 
-        {% if type == 'video'%}
-          <h2>Happiness Index: {{happiness_index}}</h2>
-          <h2>Emotion Detected(Video): {{emotion}}</h2>
 
-        {% elif type == 'speech'%}
-          <h2>{{Speech_Emotion}}</h2>
-          <h2>{{Text}}</h2>
-          <h2>{{Text_Emotion}}</h2>
 
-        {% endif %}
-        </div>
+<script>
+const btn = document.getElementById('btn');
+  btn.addEventListener('click', function handleClick() {
+  btn.textContent = 'Listening...';
+});
+</script>
 
       </div>
     </section>

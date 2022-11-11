@@ -85,7 +85,7 @@
           <h2>Inner Page</h2>
           <ol>
             <li><a href="/">Home</a></li>
-            <li>Inner Page</li>
+            <!-- <li>Inner Page</li> -->
           </ol>
         </div>
 
@@ -99,64 +99,217 @@
                 <img src="{{ url_for('video_feed') }}" style="display: block; margin-left: auto;  margin-right: auto;width: 50%;" />
           </div>
 
+
         <!-- ======= F.A.Q Section ======= -->
     <section id="faq" class="faq section-bg">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>F.A.Q</h2>
-          <p>Frequently Asked Questions</p>
+          <h2>The Questionaire</h2>
+          <p>Answer the following questions</p>
         </div>
 
-        <div class="faq-list">
-          <ul>
-            <li data-aos="fade-up">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
-                <p>
-                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                </p>
-              </div>
-            </li>
 
-            <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                </p>
-              </div>
-            </li>
+      <form action="/submit-data" method="post">
+        <div class="inputs">
+          <label for="lifes">Life Satisfaction: </label>
+            <select name="lifes">
+              <option value="0">Worst</option>
+              <option value="1">Bad</option>
+              <option value="2">Good</option>
+              <option value="3">Better</option>
+              <option value="4">Best</option>
+              <option value="5">Excellent</option>
+            </select>
+          <br>
+      </div>
+      <br>
 
-            <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                </p>
-              </div>
-            </li>
+      <div class="inputs">
+        <label for="mhealth">Mental Health</label>
+          <select name="mhealth">
+            <option value="0">Worst</option>
+            <option value="1">Bad</option>
+            <option value="2">Good</option>
+            <option value="3">Better</option>
+            <option value="4">Best</option>
+            <option value="5">Excellent</option>
+          </select>
+        <br>
+    </div>
+    <br>
 
-            <li data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
-                </p>
-              </div>
-            </li>
+    <div class="inputs">
+      <label for="hs">Health Status</label>
+        <select name="hs">
+          <option value="0">Worst</option>
+          <option value="1">Bad</option>
+          <option value="2">Good</option>
+          <option value="3">Better</option>
+          <option value="4">Best</option>
+          <option value="5">Excellent</option>
+        </select>
+      <br>
+  </div>
+  <br>
 
-            <li data-aos="fade-up" data-aos-delay="400">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
-                </p>
-              </div>
-            </li>
+  <div class="inputs">
+    <label for="ltd">Long term disability</label>
+      <select name="ltd">
+        <option value="0">Worst</option>
+        <option value="1">Bad</option>
+        <option value="2">Good</option>
+        <option value="3">Better</option>
+        <option value="4">Best</option>
+        <option value="5">Excellent</option>
+      </select>
+    <br>
+</div>
+<br>
 
-          </ul>
-        </div>
+<div class="inputs">
+  <label for="wh">Working hours</label>
+    <select name="wh">
+      <option value="0">Worst</option>
+      <option value="1">Bad</option>
+      <option value="2">Good</option>
+      <option value="3">Better</option>
+      <option value="4">Best</option>
+      <option value="5">Excellent</option>
+    </select>
+  <br>
+</div>
+<br>
+
+<div class="inputs">
+  <label for="sh">Sleeping Hours</label>
+    <select name="sh">
+      <option value="0">Worst</option>
+      <option value="1">Bad</option>
+      <option value="2">Good</option>
+      <option value="3">Better</option>
+      <option value="4">Best</option>
+      <option value="5">Excellent</option>
+    </select>
+  <br>
+</div>
+<br>
+
+<div class="inputs">
+  <label for="scp">Socio-Cultural Participation</label>
+    <select name="scp">
+      <option value="0">Worst</option>
+      <option value="1">Bad</option>
+      <option value="2">Good</option>
+      <option value="3">Better</option>
+      <option value="4">Best</option>
+      <option value="5">Excellent</option>
+    </select>
+  <br>
+</div>
+<br>
+
+<div class="inputs">
+  <label for="pf">Political Freedom</label>
+    <select name="pf">
+      <option value="0">Worst</option>
+      <option value="1">Bad</option>
+      <option value="2">Good</option>
+      <option value="3">Better</option>
+      <option value="4">Best</option>
+      <option value="5">Excellent</option>
+    </select>
+  <br>
+</div>
+<br>
+
+<div class="inputs">
+  <label for="ss">Social Support</label>
+    <select name="ss">
+      <option value="0">Worst</option>
+      <option value="1">Bad</option>
+      <option value="2">Good</option>
+      <option value="3">Better</option>
+      <option value="4">Best</option>
+      <option value="5">Excellent</option>
+    </select>
+  <br>
+</div>
+<br>
+
+<div class="inputs">
+  <label for="fam">Family</label>
+    <select name="fam">
+      <option value="0">Worst</option>
+      <option value="1">Bad</option>
+      <option value="2">Good</option>
+      <option value="3">Better</option>
+      <option value="4">Best</option>
+      <option value="5">Excellent</option>
+    </select>
+  <br>
+</div>
+<br>
+
+<div class="inputs">
+  <label for="vc">Victim of Crime</label>
+    <select name="vc">
+      <option value="0">Worst</option>
+      <option value="1">Bad</option>
+      <option value="2">Good</option>
+      <option value="3">Better</option>
+      <option value="4">Best</option>
+      <option value="5">Excellent</option>
+    </select>
+  <br>
+</div>
+<br>
+
+<div class="inputs">
+  <label for="ass">Assets</label>
+    <select name="ass">
+      <option value="0">Worst</option>
+      <option value="1">Bad</option>
+      <option value="2">Good</option>
+      <option value="3">Better</option>
+      <option value="4">Best</option>
+      <option value="5">Excellent</option>
+    </select>
+  <br>
+</div>
+<br>
+
+<div class="inputs">
+  <label for="hhi">House hold Income</label>
+    <select name="hhi">
+      <option value="0">Worst</option>
+      <option value="1">Bad</option>
+      <option value="2">Good</option>
+      <option value="3">Better</option>
+      <option value="4">Best</option>
+      <option value="5">Excellent</option>
+    </select>
+  <br>
+</div>
+<br>
+
+<div class="inputs">
+  <label for="hhq">House Quality</label>
+    <select name="hhq">
+      <option value="0">Worst</option>
+      <option value="1">Bad</option>
+      <option value="2">Good</option>
+      <option value="3">Better</option>
+      <option value="4">Best</option>
+      <option value="5">Excellent</option>
+    </select>
+  <br>
+</div>
+<br>
+
+  <div class="submit-btn"> <button type="submit" class="btn-1">Submit</button></div>
+
+      </form>
 
       </div>
     </section><!-- End F.A.Q Section -->

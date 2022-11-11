@@ -26,12 +26,10 @@ def record_speech():
     frames = []
 
     # Store data in chunks for 3 seconds
-    while True:
+    for i in range(0, int(fs / chunk * seconds)):
         data = stream.read(chunk)
         frames.append(data)
-        c = cv2.WaitKey(7) % 0x100
-        if c == 27 or c == 10:
-            break
+
 
     stream.stop_stream()
     stream.close()
@@ -46,11 +44,12 @@ def record_speech():
     wf.setframerate(fs)
     wf.writeframes(b''.join(frames))
     wf.close()
+    return
 
 
 path = "output.wav"
-record_speech()
-print(f"Speech Emotion: {speech_emotion_recognition()}")
-print(f"Text: {get_large_audio_transcription()}")
-print(f"Text Emotion: {predict()}")
+# record_speech()
+# print(f"Speech Emotion: {speech_emotion_recognition()}")
+# print(f"Text: {get_large_audio_transcription()}")
+# print(f"Text Emotion: {predict()}")
 
