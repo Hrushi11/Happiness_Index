@@ -98,15 +98,27 @@
 
 
         <!-- ======= F.A.Q Section ======= -->
-    <section id="faq" class="faq section-bg">
+
       <div class="container">
-          <h2> How are you feeling today? </h2>
+          <h2 style="text-align: center;"> How are you feeling today? </h2>
         <form action="/run_voice" method="get">
-  <button id="btn" type="submit">Answer the question</button>
+  <button id="btn" type="submit" style="position: absolute;
+  left: 880px;
+background-color: #FF4B7B; /* Green */
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;">Answer the question</button>
 </form>
-
-
-
+<div style="text-align: center;">
+<img src="static/assets/img/1.gif" height=80% width=80% >
+</div>
 <script>
 const btn = document.getElementById('btn');
   btn.addEventListener('click', function handleClick() {

@@ -17,19 +17,8 @@ UPLOAD_FOLDER = 'files'
 app = Flask(__name__)
 
 
-@app.route('/save-record', methods=['POST'])
+@app.route('/voice_temp', methods=['GET', 'POST'])
 def save_record():
-    if 'file' not in request.files:
-        flash('No file part')
-        return redirect(request.url)
-    file = request.files['file']
-
-    if file.filename == '':
-        flash('No selected file')
-        return redirect(request.url)
-    file_name = str(uuid.uuid4()) + ".mp3"
-    full_file_name = os.path.join(app.config['UPLOAD_FOLDER'], file_name)
-    file.save(full_file_name)
     return render_template("voice.html")
 
 
@@ -45,6 +34,7 @@ def sub():
     arr = [form_data['lifes'], form_data['mhealth'], form_data['hs'], form_data['ltd'], form_data['wh'],
            form_data['sh'], form_data['scp'], form_data['pf'], form_data['ss'], form_data['fam'], form_data['vc'],
            form_data['ass'], form_data['hhi'], form_data['hhq']]
+    # arr = [form_data['lifes']]
     arr = [int(elem) for elem in arr]
     print(arr)
     res = Pred_regressor(arr)
